@@ -18,8 +18,9 @@ public class Perg7 implements Runnable {
 	public void run() {
 		
 		while(true){
-			System.out.println("I am thread " + Thread.currentThread().getId() +". I do " + task);
 			try {
+				Thread.sleep(1000);
+				System.out.println("I am thread " + Thread.currentThread().getId() +". I do " + task);
 				barrier.await();
 			} catch (BrokenBarrierException | InterruptedException e) {
 				System.out.println(e.getMessage());

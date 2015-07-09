@@ -13,7 +13,7 @@ public class MainPerg6B {
 		CountDownLatch count2 = new CountDownLatch(1);
 		
 		for(int i = 1; i <= 4 ; i++){
-			executor.submit(new Perg6(i, count1, count2));
+			executor.submit(new Perg6Task1234(i, count1, count2));
 		}
 		
 		executor.submit(new Perg6Task5(5, count1, count2));
