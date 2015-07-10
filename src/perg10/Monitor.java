@@ -8,13 +8,15 @@ public class Monitor {
 	
 	
 	public void enter(){
-		System.out.println("MOnitor:Ask for permission: " + Thread.currentThread().getId());
+		
 		lock.lock();
+		System.out.println("MOnitor: Ask for permission: " + Thread.currentThread().getId());
+		
 
 	}
 	
 	public void leave(){
-		System.out.println("Monitor: Stop to Do the task: " + Thread.currentThread().getId());
+		System.out.println("Monitor: Stop to Do the task: " + Thread.currentThread().getId() + "\n");
 		lock.unlock();
 	}
 

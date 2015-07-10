@@ -8,20 +8,23 @@ import java.util.concurrent.Executors;
 ;
 
 public class MainPerg7 {
+	
+	protected static final int NUMBER_TASK=4;
+	protected static final int NUMBER_THREAD=4;
 
 	public static void main(String[] args) {
 		CyclicBarrier barrier = new CyclicBarrier(4, new Runnable() {
 			
 			@Override
 			public void run() {
-				System.out.println("All thread finish!!!!!!!!");
+				System.out.println("All thread finish!!!!!!!!\n");
 				
 			}
 		});
 		
-		ExecutorService executor = Executors.newFixedThreadPool(4);
+		ExecutorService executor = Executors.newFixedThreadPool(NUMBER_THREAD);
 		
-		for(int i = 1; i <= 4 ; i++){
+		for(int i = 1; i <= NUMBER_TASK ; i++){
 			executor.submit(new Perg7(i, barrier));
 		}
 		

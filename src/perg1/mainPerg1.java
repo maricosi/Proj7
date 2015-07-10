@@ -6,11 +6,14 @@ import java.util.concurrent.Executors;
 
 
 public class mainPerg1 {
+	
+	protected static final int NUMBER_TASK=8;
+	protected static final int NUMBER_THREAD=2;
 
 	public static void main(String[] args) {
-		ExecutorService executor = Executors.newFixedThreadPool(2);
+		ExecutorService executor = Executors.newFixedThreadPool(NUMBER_THREAD);
 		
-		for (int i = 1; i <= 8 ; i++){
+		for (int i = 1; i <= NUMBER_TASK ; i++){
 			executor.submit(new Pergunta1(i));
 		}
 		executor.shutdown();

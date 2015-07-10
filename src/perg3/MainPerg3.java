@@ -10,6 +10,8 @@ public class MainPerg3 {
 
 	private static Scanner sc;
 
+	protected static final int NUMBER_THREAD=2;
+
 	public static void main(String[] args) {
 		sc = new Scanner(System.in);
 		System.out.println("Pergunta 3");
@@ -41,7 +43,7 @@ public class MainPerg3 {
 
 	public static void timeParallel (int number){
 		final ConjOfNumbers serie= new ConjOfNumbers(number);
-		ExecutorService executor = Executors.newFixedThreadPool(2);
+		ExecutorService executor = Executors.newFixedThreadPool(NUMBER_THREAD);
 
 		long startTime = System.nanoTime();
 		

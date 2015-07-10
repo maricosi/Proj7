@@ -21,7 +21,7 @@ public class Perg9Task implements Runnable {
 		monitor.enter(priority);
 		try {
 			Thread.sleep(1000);
-			System.out.println( "-------I do task " + task +" and I have priority " + priority + ".-------");
+			System.out.println( "-------I do task " + task +" and I have priority " + priority + ".-------\n");
 			monitor.leave();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

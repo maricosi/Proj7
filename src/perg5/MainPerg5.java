@@ -1,15 +1,16 @@
 package perg5;
 
 import java.util.concurrent.Exchanger;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+
 
 public class MainPerg5 {
+	
+	//protected static final int NUMBER_THREAD=2;
 
 	public static void main(String[] args) {
 		Exchanger<Boolean> exchanger = new Exchanger<>();
 		
-		/*ExecutorService executor = Executors.newFixedThreadPool(2);
+		/*ExecutorService executor = Executors.newFixedThreadPool(NUMBER_THREAD);
 		executor.submit(new Perg5Thread(true, exchanger));
 		executor.submit(new Perg5Thread(false, exchanger));
 		*/

@@ -1,7 +1,5 @@
 package perg10;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
@@ -24,7 +22,6 @@ public class ImplementLock implements Lock, Serializable{
 		}
 
 
-
 		// Acquire the lock if state is zero
 		public boolean tryAcquire(int acquires) {
 			assert acquires == 1; // Otherwise unused
@@ -32,6 +29,7 @@ public class ImplementLock implements Lock, Serializable{
 			if(!hasQueuedPredecessors()){
 				if (compareAndSetState(0, 1)) {
 					setExclusiveOwnerThread(Thread.currentThread());
+					
 					return true;
 				}
 			}
@@ -48,23 +46,14 @@ public class ImplementLock implements Lock, Serializable{
 			return true;
 		}
 
-		// Provide a Condition
-		Condition newCondition() { return new ConditionObject(); }
-
-		// Deserialize properly
-		private void readObject(ObjectInputStream s)
-				throws IOException, ClassNotFoundException {
-			s.defaultReadObject();
-			setState(0); // reset to unlocked state
-		}
 	}
 
 	// The sync object does all the hard work. We just forward to it.
 	private final Sync sync = new Sync();
 
 	public void lock(){
-		
 		sync.acquire(1);
+		
 	}
 
 	public boolean tryLock(){ 
@@ -77,15 +66,7 @@ public class ImplementLock implements Lock, Serializable{
 	}
 
 	public Condition newCondition(){ 
-		return sync.newCondition();
-	}
-
-	public boolean isLocked()         { 
-		return sync.isHeldExclusively();
-	}
-
-	public boolean hasQueuedThreads() { 
-		return sync.hasQueuedThreads();
+		return null;
 	}
 
 	public void lockInterruptibly() throws InterruptedException {
