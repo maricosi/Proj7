@@ -4,12 +4,12 @@ import java.util.concurrent.Semaphore;
 
 
 
-public class Pergunta2 implements Runnable{
+public class Perg2Thread implements Runnable{
 
 	private int numberOfThread;
 	private static Semaphore [] semaphores= new Semaphore[8];
 
-	public Pergunta2(int numberOftask) {
+	public Perg2Thread(int numberOftask) {
 		this.numberOfThread = numberOftask;
 	}
 	
@@ -22,9 +22,7 @@ public class Pergunta2 implements Runnable{
 				semaphores[i]=new Semaphore(0);
 			}
 			System.out.println(semaphores[i+2].toString());
-		}
-		
-		
+		}		
 	}
 
 	@Override
@@ -43,11 +41,9 @@ public class Pergunta2 implements Runnable{
 			System.out.println(numberOfThread);
 			System.out.println(semaphores[numberOfThread+2].toString());
 			semaphores[numberOfThread+2].release();
-			
-			
+						
 		}
-		
-		
+	
 	}
 	
 

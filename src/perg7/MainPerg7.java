@@ -25,7 +25,7 @@ public class MainPerg7 {
 		ExecutorService executor = Executors.newFixedThreadPool(NUMBER_THREAD);
 		
 		for(int i = 1; i <= NUMBER_TASK ; i++){
-			executor.submit(new Perg7(i, barrier));
+			executor.submit(new Perg7Task(i, barrier));
 		}
 		
 		executor.shutdown();

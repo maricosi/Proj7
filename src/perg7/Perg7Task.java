@@ -3,13 +3,13 @@ package perg7;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
-public class Perg7 implements Runnable {
+public class Perg7Task implements Runnable {
 
 	private int task;
 	private CyclicBarrier barrier;
 	
 
-	public Perg7(int task, CyclicBarrier barrier ) {
+	public Perg7Task(int task, CyclicBarrier barrier ) {
 		this.barrier= barrier;
 		this.task=task;
 	}

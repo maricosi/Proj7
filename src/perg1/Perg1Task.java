@@ -2,12 +2,12 @@ package perg1;
 
 
 
-public class Pergunta1 implements Runnable{
+public class Perg1Task implements Runnable{
 
 	private int numberOftask;
 	
 
-	public Pergunta1(int numberOftask) {
+	public Perg1Task(int numberOftask) {
 		this.numberOftask = numberOftask;
 	}
 

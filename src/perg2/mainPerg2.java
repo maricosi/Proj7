@@ -14,7 +14,7 @@ public class mainPerg2 {
 		ExecutorService executor = Executors.newFixedThreadPool(NUMBER_THREAD);
 		
 		for (int i = 1; i <= NUMBER_TASK ; i++){
-			executor.submit(new Pergunta2(i));
+			executor.submit(new Perg2Thread(i));
 		}
 		executor.shutdown();
 	}
