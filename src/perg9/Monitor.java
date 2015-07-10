@@ -1,7 +1,5 @@
 package perg9;
 
-
-
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -21,13 +19,13 @@ public class Monitor {
 	});
 	private int nextOrder = 1;
 
-
 	public synchronized void enter(Perg9Task task){
 		task.setOrderNo(nextOrder++);
 		priorities.add(task);
 		while(priorities.peek() != task || numberOFTask != 0){
 			try {
-				System.out.println("Thread: "+Thread.currentThread().getId() + ". Priotity: " + task.getPriority() );
+				System.out.println("Thread: "+Thread.currentThread().getId() + 
+						". Priotity: " + task.getPriority() );
 				wait();
 			} catch (InterruptedException e) {
 				e.getMessage();

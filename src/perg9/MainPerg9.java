@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class MainPerg9 {
-	
+
 	protected static final int NUMBER_TASK=8;
 	protected static final int NUMBER_THREAD=8;
 
