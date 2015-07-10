@@ -1,7 +1,5 @@
 package perg10;
 
-
-
 public class Perg10Thread implements Runnable {
 
 	private int task;
@@ -24,8 +22,6 @@ public class Perg10Thread implements Runnable {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}	
-
 	}
-
 
 }

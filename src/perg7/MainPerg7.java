@@ -1,11 +1,8 @@
 package perg7;
 
-
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-;
 
 public class MainPerg7 {
 	

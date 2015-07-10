@@ -26,7 +26,6 @@ public class ConjOfNumbers {
 		return totalNumber/numbers.size();
 	}
 
-
 	public double getMin (){
 		double numberMin=MAXIMO;
 		for (Double num: numbers){

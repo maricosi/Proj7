@@ -4,13 +4,10 @@ import java.util.concurrent.Exchanger;
 
 public class Perg5Thread implements Runnable {
 
-	
 	private Exchanger <Boolean> exchanger;
     private boolean change;
     private String task;
     
-	
-
 	public Perg5Thread( boolean change, Exchanger <Boolean> exchanger , String task ) {
 		this.exchanger= exchanger;
 		this.change=change;
@@ -27,12 +24,9 @@ public class Perg5Thread implements Runnable {
 				System.out.println(e.getMessage());
 			}
 			if(change){
-				System.out.println("I am thread " + Thread.currentThread().getId() +". I do "+task+".");
-					
+				System.out.println("I am thread " + Thread.currentThread().getId() +". I do "+task+".");	
 			}
-
 		}
 	}
 	
-
 }

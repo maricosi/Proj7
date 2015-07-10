@@ -14,11 +14,11 @@ public class MainPerg5 {
 		executor.submit(new Perg5Thread(true, exchanger));
 		executor.submit(new Perg5Thread(false, exchanger));
 		*/
+		
 		Thread t1 = new Thread(new Perg5Thread(true,exchanger,"pong"));
 		t1.start();
 		Thread t2 = new Thread( new Perg5Thread(false, exchanger, "ping")); 
 		t2.start();
-
 
 	}
 

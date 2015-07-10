@@ -1,12 +1,9 @@
 package perg8;
 
-
-
 public class Perg8Thread implements Runnable {
 
 	private int task;
 	private Monitor monitor;
-
 
 	public Perg8Thread(int task, Monitor monitor) {
 		this.task=task;
@@ -24,8 +21,6 @@ public class Perg8Thread implements Runnable {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}	
-
 	}
-
 
 }

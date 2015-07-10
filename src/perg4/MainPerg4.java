@@ -29,8 +29,6 @@ public class MainPerg4 {
 			} catch (InterruptedException e) {
 				System.out.println(e.getMessage());
 			}	
-		}
-		
+		}	
 	}
-
 }

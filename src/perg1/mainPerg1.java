@@ -1,11 +1,9 @@
 package perg1;
 
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
-public class mainPerg1 {
+public class MainPerg1 {
 	
 	protected static final int NUMBER_TASK=8;
 	protected static final int NUMBER_THREAD=2;

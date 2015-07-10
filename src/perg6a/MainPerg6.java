@@ -13,12 +13,11 @@ public class MainPerg6 {
 		ExecutorService executor = Executors.newFixedThreadPool(NUMBER_THREAD);
 		CountDownLatch count = new CountDownLatch(NUMBER_TASK);
 		for(int i = 1; i <= NUMBER_TASK ; i++){
-			executor.submit(new Perg6(i, count));
+			executor.submit(new Perg6Task1234(i, count));
 		}
 		
 		executor.submit(new Perg6Task5(NUMBER_TASK+1, count));
 		
 		executor.shutdown();
 	}
-
 }

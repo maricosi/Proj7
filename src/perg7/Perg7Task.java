@@ -28,5 +28,4 @@ public class Perg7Task implements Runnable {
 		}
 	}
 
-
 }

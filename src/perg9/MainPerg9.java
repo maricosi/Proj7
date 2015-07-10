@@ -4,8 +4,6 @@ import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
-
 public class MainPerg9 {
 	
 	protected static final int NUMBER_TASK=8;
@@ -17,7 +15,7 @@ public class MainPerg9 {
 		Random r = new Random();
 
 		for (int i = 1; i <= NUMBER_TASK ; i++){
-			int priority=r.nextInt(1000);
+			int priority=r.nextInt(5);
 			executor.submit(new Perg9Task(i, priority , monitor));
 		}
 		executor.shutdown();

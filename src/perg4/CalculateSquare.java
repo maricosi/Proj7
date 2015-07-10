@@ -6,7 +6,6 @@ public class CalculateSquare implements Runnable {
 
 	private ArrayBlockingQueue<Double> array;
 	
-	
 	public CalculateSquare (ArrayBlockingQueue<Double> array)  {
 		this.array=array;	
 	}
@@ -23,9 +22,8 @@ public class CalculateSquare implements Runnable {
 			} catch (InterruptedException e) {
 				e.getMessage();
 			}
-			System.out.format("Square of %.2f is %.3f . The thread is %d.%n", number,squareOfNumber,Thread.currentThread().getId());
+			System.out.format("Square of %.2f is %.3f . The thread is %d.%n",
+					number,squareOfNumber,Thread.currentThread().getId());
 		}
-		
 	}
-
 }

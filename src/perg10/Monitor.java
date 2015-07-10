@@ -1,18 +1,14 @@
 package perg10;
 
-
-
 public class Monitor {
 
 	private ImplementLock lock = new ImplementLock();;
-	
 	
 	public void enter(){
 		
 		lock.lock();
 		System.out.println("MOnitor: Ask for permission: " + Thread.currentThread().getId());
 		
-
 	}
 	
 	public void leave(){

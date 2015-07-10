@@ -22,5 +22,4 @@ public class Perg6Task5 implements Runnable {
 		System.out.println("I am thread " + Thread.currentThread().getId() +". I do " + task + ". I´m the last task.");
 	}
 
-
 }
